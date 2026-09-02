@@ -4,9 +4,20 @@ Başlangıç seviyesinde hazırlanmış küçük bir ASP.NET Core Web API projes
 
 ## Çalıştırma
 
+Önce backend'i başlatın:
+
 ```bash
 dotnet run --urls http://localhost:5050
 ```
+
+Başka bir terminalde frontend'i başlatın:
+
+```bash
+cd Frontend
+npm run dev
+```
+
+Frontend genellikle `http://localhost:5173` adresinde açılır.
 
 Tarayıcı veya `curl` ile deneyin:
 
@@ -16,6 +27,8 @@ curl "http://localhost:5050/api/products?category=Elektronik"
 curl "http://localhost:5050/api/products?search=kulak"
 curl http://localhost:5050/api/products/1
 ```
+
+Frontend, backend'den ürünleri `fetch` ile alır. Backend'deki CORS ayarı `localhost:5173` adresinden gelen isteklere izin verir.
 
 ## Projede kullanılanlar
 
@@ -32,6 +45,7 @@ curl http://localhost:5050/api/products/1
 - `Repositories`: Ürünleri saklama ve okuma işlemleri
 - `Services`: Uygulama kuralları ve LINQ sorguları
 - `Program.cs`: DI kayıtları ve endpoint tanımları
+- `Frontend/src`: React + TypeScript kullanıcı arayüzü
 
 ## Öğrenme sırası
 

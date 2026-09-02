@@ -3,3 +3,5 @@ obj/
 .vs/
 *.user
 *.suo
+Frontend/node_modules/
+Frontend/dist/
